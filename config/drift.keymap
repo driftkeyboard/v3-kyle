@@ -28,7 +28,7 @@
     behaviors {
         enc_scroll: enc_scroll {
             compatible = "zmk,behavior_encoder";
-            #sensor-binding-cells = <0>;
+            sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
         };
     };

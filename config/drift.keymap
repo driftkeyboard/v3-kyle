@@ -3,7 +3,7 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
-#define ZMK_MOUSE_SCRL_VAL 140              // for encoder mouse-scroll to work
+//#define ZMK_MOUSE_SCRL_VAL 140              // for encoder mouse-scroll to work
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
@@ -15,6 +15,8 @@
 #define LOWER 1
 #define RAISE 2
 #define ADJUST 3
+
+
 
 / {
     conditional_layers {
@@ -28,9 +30,9 @@
 
     behaviors {
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&msc>, <&msc>;
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
             tap-ms = <20>;
         };
     };
@@ -56,7 +58,7 @@
                                                      &kp LSHFT  &kp SPACE  &mo LOWER                          &mo RAISE  &kp SPACE  &kp BSPC
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down SCRL_UP SCRL_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &scroll_up_down>;
         };
 
         lower_layer {

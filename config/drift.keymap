@@ -16,7 +16,10 @@
 #define RAISE 2
 #define ADJUST 3
 
-
+&mt {
+    flavor = "balanced";
+    quick-tap-ms = <0>;
+};
 
 / {
     conditional_layers {

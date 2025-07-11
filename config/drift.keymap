@@ -27,8 +27,8 @@
 
     behaviors {
         enc_scroll: enc_scroll {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
+            compatible = "zmk,behavior_encoder";
+            //#sensor-binding-cells = <2>;
             bindings = <&msc>, <&msc>;
         };
     };

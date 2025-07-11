@@ -2,8 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 120    // default: 10
-//#define ZMK_MOUSE_SCRL_VAL 140              // for encoder mouse-scroll to work
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 120    // default: 10 - for encoder mouse-scroll to work
 
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
